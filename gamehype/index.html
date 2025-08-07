@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GameHype</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0e0e0e;
+      color: white;
+    }
+    header {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #00ffcc;
+      letter-spacing: 2px;
+    }
+    nav {
+      text-align: center;
+      margin-top: 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background-color: #00ffcc;
+      color: black;
+    }
+    .search-bar {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .search-bar input {
+      width: 40%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: none;
+    }
+    section {
+      padding: 30px;
+    }
+    h2 {
+      border-bottom: 2px solid #00ffcc;
+      padding-bottom: 10px;
+    }
+    .game-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .game-card {
+      background-color: #1a1a1a;
+      border-radius: 12px;
+      overflow: hidden;
+      width: 250px;
+      transition: transform 0.3s;
+      cursor: pointer;
+    }
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+    .game-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+    }
+    .game-card h3 {
+      margin: 10px;
+      font-size: 20px;
+    }
+    footer {
+      text-align: center;
+      background-color: #1a1a1a;
+      padding: 20px;
+      color: #999;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>GameHype</header>
+
+  <nav>
+    <a href="#console">Console</a>
+    <a href="#pc">PC</a>
+    <a href="#mobile">Mobile</a>
+  </nav>
+
+  <div class="search-bar">
+    <input type="text" placeholder="Search games..." oninput="searchGames(this.value)">
+  </div>
+
+  <section id="console">
+    <h2>Console Games</h2>
+    <div class="game-grid" id="console-games">
+      <div class="game-card">
+        <a href="#">
+          <img src="https://i.imgur.com/jNNT4Uv.jpeg" alt="Minecraft">
+          <h3>Minecraft</h3>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#">
+          <img src="https://i.imgur.com/kElJZOV.jpeg" alt="God of War">
+          <h3>God of War</h3>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#">
+          <img src="https://i.imgur.com/Ckpajyt.jpeg" alt="Forza Horizon 5">
+          <h3>Forza Horizon 5</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="pc">
+    <h2>PC Games</h2>
+    <div class="game-grid" id="pc-games">
+      <div class="game-card">
+        <a href="#">
+          <img src="https://i.imgur.com/LG0C9ix.jpeg" alt="Call of Duty">
+          <h3>Call of Duty</h3>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#">
+          <img src="https://i.imgur.com/D22XDtp.jpeg" alt="GTA 5">
+          <h3>GTA 5</h3>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#">
+          <img src="https://i.imgur.com/ZDF7DQQ.jpeg" alt="Red Dead Redemption 2">
+          <h3>Red Dead Redemption 2</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="mobile">
+    <h2>Mobile Games</h2>
+    <div class="game-grid" id="mobile-games">
+      <div class="game-card">
+        <a href="#">
+          <img src="https://i.imgur.com/xzOm3DU.jpeg" alt="Free Fire">
+          <h3>Free Fire</h3>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#">
+          <img src="https://i.imgur.com/yaeCFPa.jpeg" alt="Among Us">
+          <h3>Among Us</h3>
+        </a>
+      </div>
+      <div class="game-card">
+        <a href="#">
+          <img src="https://i.imgur.com/95EzrO1.jpeg" alt="Call of Duty Mobile">
+          <h3>Call of Duty Mobile</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 GameHype. All rights reserved.</footer>
+
+  <script>
+    function searchGames(query) {
+      query = query.toLowerCase();
+      const cards = document.querySelectorAll(".game-card");
+      cards.forEach(card => {
+        const title = card.innerText.toLowerCase();
+        card.style.display = title.includes(query) ? "block" : "none";
+      });
+    }
+  </script>
+
+</body>
+</html>
