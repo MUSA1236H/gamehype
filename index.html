@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GameHype</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0f0f0f;
+      color: #fff;
+    }
+    header {
+      background: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3rem;
+      color: #ff3c00;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #ff3c00;
+    }
+    .search-box {
+      text-align: center;
+      margin: 30px 0;
+    }
+    .search-box input {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    .section {
+      padding: 20px;
+    }
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff3c00;
+      font-size: 2rem;
+    }
+    .game-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .game-card {
+      background: #1f1f1f;
+      width: 280px;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .game-card:hover {
+      transform: scale(1.05);
+    }
+    .game-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .game-card .content {
+      padding: 15px;
+    }
+    .game-card h3 {
+      margin: 0;
+      font-size: 20px;
+    }
+    .game-card p {
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    .game-card a {
+      display: inline-block;
+      margin-top: 10px;
+      color: #ff3c00;
+      text-decoration: none;
+    }
+    .game-card a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>GameHype</h1>
+    <nav>
+      <a href="#console">Console</a>
+      <a href="#pc">PC</a>
+      <a href="#mobile">Mobile</a>
+    </nav>
+  </header>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search games...">
+  </div>
+
+  <!-- Console Games -->
+  <section class="section" id="console">
+    <h2>Console Games</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="https://i.imgur.com/DK91jQj.jpg" alt="Minecraft">
+        <div class="content">
+          <h3>Minecraft</h3>
+          <p>Explore endless worlds and build everything from simple homes to grand castles.</p>
+          <a href="https://www.youtube.com/watch?v=MmB9b5njVbA" target="_blank">Watch Trailer</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://i.imgur.com/oCPbwjF.jpg" alt="God of War">
+        <div class="content">
+          <h3>God of War</h3>
+          <p>Embark on a mythological journey filled with action and a deep story.</p>
+          <a href="https://www.youtube.com/watch?v=K0u_kAWLJOA" target="_blank">Watch Trailer</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://i.imgur.com/SVuIihC.jpg" alt="Forza Horizon 5">
+        <div class="content">
+          <h3>Forza Horizon 5</h3>
+          <p>Race through the dynamic landscapes of Mexico in this stunning open-world racer.</p>
+          <a href="https://www.youtube.com/watch?v=FYH9n37B7Yw" target="_blank">Watch Trailer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PC Games -->
+  <section class="section" id="pc">
+    <h2>PC Games</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="https://i.imgur.com/x1hjvb9.jpg" alt="Call of Duty">
+        <div class="content">
+          <h3>Call of Duty</h3>
+          <p>Fast-paced FPS action with campaign, multiplayer, and warzone mode.</p>
+          <a href="https://www.youtube.com/watch?v=OeVapCrI1pY" target="_blank">Watch Trailer</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://i.imgur.com/NrKzZ6P.jpg" alt="GTA 5">
+        <div class="content">
+          <h3>GTA 5</h3>
+          <p>Live a life of crime in a detailed open world full of chaos and missions.</p>
+          <a href="https://www.youtube.com/watch?v=QkkoHAzjnUs" target="_blank">Watch Trailer</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://i.imgur.com/hC8qjvv.jpg" alt="Red Dead Redemption 2">
+        <div class="content">
+          <h3>Red Dead Redemption 2</h3>
+          <p>A Western masterpiece of storytelling, survival, and gun-slinging action.</p>
+          <a href="https://www.youtube.com/watch?v=eaW0tYpxyp0" target="_blank">Watch Trailer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Games -->
+  <section class="section" id="mobile">
+    <h2>Mobile Games</h2>
+    <div class="game-grid">
+      <div class="game-card">
+        <img src="https://i.imgur.com/yNWyOhk.jpg" alt="Free Fire">
+        <div class="content">
+          <h3>Free Fire</h3>
+          <p>Ultimate mobile battle royale with fast-paced shooting and stylish characters.</p>
+          <a href="https://www.youtube.com/watch?v=RkfuTxN3nr4" target="_blank">Watch Trailer</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://i.imgur.com/75xEG8D.jpg" alt="Among Us">
+        <div class="content">
+          <h3>Among Us</h3>
+          <p>Find the impostor or become one in this fun social deduction game.</p>
+          <a href="https://www.youtube.com/watch?v=NSJ4cESNQfE" target="_blank">Watch Trailer</a>
+        </div>
+      </div>
+      <div class="game-card">
+        <img src="https://i.imgur.com/fPrYZbE.jpg" alt="Call of Duty Mobile">
+        <div class="content">
+          <h3>Call of Duty Mobile</h3>
+          <p>Enjoy iconic CoD gameplay in multiplayer and BR modes right on your phone.</p>
+          <a href="https://www.youtube.com/watch?v=6DL_wRzX4lQ" target="_blank">Watch Trailer</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const input = document.getElementById('searchInput');
+    input.addEventListener('input', () => {
+      const filter = input.value.toLowerCase();
+      const cards = document.querySelectorAll('.game-card');
+      cards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = title.includes(filter) ? 'block' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>
